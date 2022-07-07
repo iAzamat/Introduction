@@ -10,7 +10,7 @@ while (distance > 10)
 {
     if (friend == 1)
     {
-        time = distance / (firstFriendSpeed + dogSpeed);
+        time = distance / (firstFriendSpeed - dogSpeed);
         friend = 2;
     }
     else
@@ -18,7 +18,7 @@ while (distance > 10)
         time = distance / (secondFriendSpeed + dogSpeed);
         friend = 1;
     }
-    distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
+    distance = distance - (firstFriendSpeed - secondFriendSpeed) * time;
     count += 1;
 }
 Console.WriteLine("Собака пробежала " + count + " раз");
